@@ -16,6 +16,9 @@ WWW_USER="www-data"
 sudo -u $WWW_USER $DEMO_DIR/reset.sh --env=prod --no-debug
 
 # Import projects
-#git clone https://github.com/openl10n/demo-silex.git $TEMP_DIR/demo-silex
-#$OPENL10N --working-dir=$TEMP_DIR/demo-silex --no-interaction init http://user:userpass@demo.openl10n.io
-#$OPENL10N --working-dir=$TEMP_DIR/demo-silex --no-interaction push --locale=all
+git clone https://github.com/openl10n/demo-silex.git $TEMP_DIR/demo-silex
+$OPENL10N --working-dir=$TEMP_DIR/demo-silex --no-interaction init http://user:userpass@demo.openl10n.io
+$OPENL10N --working-dir=$TEMP_DIR/demo-silex --no-interaction push --locale=all
+
+# Clean temp dir
+rm -rf $TEMP_DIR
