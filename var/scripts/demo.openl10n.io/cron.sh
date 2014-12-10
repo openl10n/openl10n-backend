@@ -1,7 +1,8 @@
-#!/bin/bash
+#!/usr/bin/env bash
+set -e
 
 # System vars
-TMPDIR="/tmp"
+[ -z "$TMPDIR" ] && TMPDIR="/tmp"
 
 # Script vars
 ROOT_DIR=$(dirname $0)
